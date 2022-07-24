@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace Teste_trabalho
+namespace Trabalho_estágio___Pronto__
 {
     public class Manipulacao
     {

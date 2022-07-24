@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Teste_trabalho
+namespace Trabalho_estágio___Pronto__
 {
     class Program
     {
@@ -26,7 +26,6 @@ namespace Teste_trabalho
                 {
                     Console.Write("Digite o Nome do Produto:");
                     string nomep = Console.ReadLine();
-                    
                     Console.Write("Digite o Valor do Produto:");
                     string valorp = Console.ReadLine().Replace(",", ".");
                     Console.Write("Digite a quantidade do Produto:");
@@ -38,8 +37,8 @@ namespace Teste_trabalho
                 {
                     Console.Write("Digite o nome do Produto que deseja alterar:");
                     string nomep = Console.ReadLine();
-                    Console.Write("Digite o novo Valor do Produto:");
-                    string valorp = Console.ReadLine();
+                    Console.Write("Digite o novo Valor do Produ to:");
+                    string valorp = Console.ReadLine().Replace(",", ".");
                     Console.Write("Digite a nova quantidade do Produto:");
                     int qtdp = Convert.ToInt32(Console.ReadLine());
                     mn.Alteração(nomep, valorp, qtdp);
