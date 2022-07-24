@@ -26,9 +26,9 @@ namespace Teste_trabalho
                 {
                     Console.Write("Digite o Nome do Produto:");
                     string nomep = Console.ReadLine();
-                    Replace(",", ".");
+                    
                     Console.Write("Digite o Valor do Produto:");
-                    string valorp = Console.ReadLine();
+                    string valorp = Console.ReadLine().Replace(",", ".");
                     Console.Write("Digite a quantidade do Produto:");
                     int qtdp = Convert.ToInt32(Console.ReadLine());
                     mn.Inclusão(nomep, valorp, qtdp);
@@ -62,11 +62,6 @@ namespace Teste_trabalho
             } while (opc != "5");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Obrigado por usar este programa! :)");
-        }
-
-        private static void Replace(string v1, string v2)
-        {
-            throw new NotImplementedException();
         }
     }
 }
