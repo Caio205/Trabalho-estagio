@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace Trabalho_estágio___Pronto__
+namespace Teste_trabalho
 {
     public class Manipulacao
     {
@@ -19,8 +19,9 @@ namespace Trabalho_estágio___Pronto__
             try
             {
                 cmd.Connection = Conexao.Conectar();
-                var i = cmd.ExecuteScalar();
+                var i = cmd.ExecuteNonQuery();
                 Conexao.Desconectar();
+                cmd = new SqlCommand();
             }
             catch (SqlException es)
             {
@@ -53,6 +54,7 @@ namespace Trabalho_estágio___Pronto__
                 cmd.Connection = Conexao.Conectar();
                 var i = cmd.ExecuteNonQuery();
                 Conexao.Desconectar();
+                cmd = new SqlCommand();
             }
             catch (SqlException es)
             {
@@ -61,7 +63,7 @@ namespace Trabalho_estágio___Pronto__
         }
         public void Consulta()
         {
-            cmd.CommandText = $"select * from Produto";
+            cmd.CommandText = "select * from Produto";
 
             try
             {

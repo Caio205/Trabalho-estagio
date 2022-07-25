@@ -1,17 +1,19 @@
 ﻿using System;
 
-namespace Trabalho_estágio___Pronto__
+namespace Teste_trabalho
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string opc;
             Manipulacao mn = new Manipulacao();
+            Console.WriteLine("Seja bem vindo");
             do
             {
                 Console.Clear();
                 Console.ResetColor();
+                Console.WriteLine("Escolha uma opção:");
                 Console.WriteLine("+----------------------+");
                 Console.WriteLine("| 1-Incluir Produtos   |");
                 Console.WriteLine("| 2-Alterar Produtos   |");
@@ -19,7 +21,9 @@ namespace Trabalho_estágio___Pronto__
                 Console.WriteLine("| 4-Listar Produtos    |");
                 Console.WriteLine("| 5-Sair               |");
                 Console.WriteLine("+----------------------+");
+                Console.Write("\nR:");
                 opc = Console.ReadLine();
+                
                 Console.Clear();
 
                 if (opc == "1")
@@ -37,7 +41,7 @@ namespace Trabalho_estágio___Pronto__
                 {
                     Console.Write("Digite o nome do Produto que deseja alterar:");
                     string nomep = Console.ReadLine();
-                    Console.Write("Digite o novo Valor do Produ to:");
+                    Console.Write("Digite o novo Valor do Produto:");
                     string valorp = Console.ReadLine().Replace(",", ".");
                     Console.Write("Digite a nova quantidade do Produto:");
                     int qtdp = Convert.ToInt32(Console.ReadLine());
@@ -55,7 +59,7 @@ namespace Trabalho_estágio___Pronto__
                 {
                     mn.Consulta();
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("Aperte qualquer tecla para voltar");
+                    Console.Write("\nAperte qualquer tecla para voltar");
                     Console.ReadKey();
                 }
             } while (opc != "5");
